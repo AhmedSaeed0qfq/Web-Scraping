@@ -37,12 +37,10 @@ for link in links:
     result=requests.get(link)
     scr=result.content
     soup=BeautifulSoup(scr,"lxml")
-    
-'''       
+        
 file_list=[job_title,company_name,location,skill,links,salary]
 ziped_lists=zip_longest(*file_list)
-with open('/Users/Eslam hosam/Documents/datascience.csv','w') as file:
+with open('/Users/AhmedSaeed/Documents/datascience.csv','w') as file:
     writer=csv.writer(file)
     writer.writerow(['job title','company name','location','skills','link','salary'])
     writer.writerows(ziped_lists)
-'''
